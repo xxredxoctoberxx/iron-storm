@@ -12,37 +12,37 @@ Originally backed by an Israeli proxy provider, Iron-Storm was actively deployed
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
-### 📁 Prerequisites
-- A `.csv` file of account credentials (format: `account,password,email,password`)
-- A `proxy.txt` file with proxy credentials (format: `user,password,host,port`)
+### Prerequisites
+- A `.csv` file of account credentials named `accounts.csv` in the format: `account,password,email,password`
+- A `proxy.txt` file with proxy credentials in the format: `user,password,host,port`
 - A folder called `accounts_pfps/` populated with varied profile pictures
 
-### 🛠 Setup Steps
+### Setup Steps
 
-1. **Prepare sessions**  
+1. Prepare sessions  
    Run:
    ```bash
-   python set_session.py test.csv
+   python set_session.py accounts.csv
    ```
-   This creates `test.csv_clean` with successfully logged-in sessions.
+   This creates `accounts_clean.csv` with successfully logged-in sessions.
 
-2. **Assign avatars and user tags**  
+2. Assign avatars and user tags  
    Run:
    ```bash
    python avataring.py
    ```
    This outputs `avatared_batch.csv` with updated profile data.
 
-3. **Finalize sessions with new avatars**  
+3. Finalize sessions with new avatars  
    Run:
    ```bash
    python set_session.py avatared_batch.csv
    ```
-   Produces `avatared_batch.csv_clean` with fully-ready bot sessions.
+   Produces `avatared_batch_clean.csv` with fully-ready bot sessions.
 
-4. **Run the bot army**  
+4. Run the bot army  
    Launch:
    ```bash
    python iron_storm.py
@@ -50,7 +50,7 @@ Originally backed by an Israeli proxy provider, Iron-Storm was actively deployed
 
 ---
 
-## 🧱 Folder Structure
+## Folder Structure
 ```
 iron-storm/
 ├── accounts_pfps/          # Profile images for bots
@@ -63,10 +63,10 @@ iron-storm/
 
 ---
 
-## ⚠️ Disclaimer
+## Disclaimer
 This tool was created for defensive and informational purposes during an ongoing crisis. Please use responsibly and in accordance with local laws and platform policies.
 
 ---
 
-## 📄 License
+## License
 Proprietary — for internal or research use only.
